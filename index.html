@@ -1,0 +1,2220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dr. Kehinde Idowu - AI-driven antiviral drug discovery and screening platforms">
+    <title>Dr. Kehinde Idowu | AI Drug Discovery Portfolio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="https://fav.farm/🧪" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    
+    <style>
+        :root {
+            /* Soft background with slight lavender hint */
+            --background: hsl(240, 25%, 98%);
+            --foreground: hsl(222, 22%, 18%);
+            --muted: hsl(240, 15%, 92%);
+            --muted-foreground: hsl(240, 10%, 50%);
+            --card: hsl(240, 25%, 98%);
+            --card-foreground: hsl(222, 22%, 18%);
+            --border: hsl(240, 15%, 90%);
+            --input: hsl(240, 15%, 90%);
+            
+            /* Soft teal as primary color */
+            --primary: hsl(180, 50%, 45%);
+            --primary-dark: hsl(180, 60%, 35%);
+            --primary-light: hsl(180, 50%, 85%);
+            
+            /* Soft lavender for secondary */
+            --secondary: hsl(255, 40%, 88%);
+            --secondary-dark: hsl(255, 40%, 78%);
+            
+            /* Gentle rose accent */
+            --accent: hsl(340, 70%, 80%);
+            --accent-dark: hsl(340, 70%, 70%);
+            
+            /* Success color - soft sage green */
+            --success: hsl(150, 50%, 50%);
+            --success-light: hsl(150, 50%, 90%);
+            
+            /* Text colors */
+            --text-dark: hsl(222, 22%, 18%);
+            --text-light: hsl(222, 15%, 45%);
+            --text-muted: hsl(222, 10%, 60%);
+            
+            /* Background pattern colors */
+            --pattern-dot: hsl(180, 50%, 85%);
+            
+            /* Font */
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        /* Reset and Base Styles */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--background);
+            color: var(--foreground);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--primary-dark);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+        
+        .text-muted {
+            color: var(--text-muted);
+        }
+        
+        .text-primary {
+            color: var(--primary);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(240, 243, 255, 0.9);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .logo-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        
+        .logo-text {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-menu li a {
+            color: var(--text-light);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-menu li a:hover {
+            color: var(--primary);
+        }
+        
+        .mobile-menu-button {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-dark);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Progress Bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            z-index: 1001;
+            width: 0%;
+            transition: width 0.2s ease;
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            padding: 10rem 0 6rem;
+            overflow: hidden;
+        }
+        
+        .hero-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--background);
+            background-image: 
+                radial-gradient(var(--pattern-dot) 0.5px, transparent 0.5px), 
+                radial-gradient(var(--pattern-dot) 0.5px, var(--background) 0.5px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            opacity: 0.15;
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            position: relative;
+            align-items: center;
+        }
+        
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            background-color: rgba(var(--primary), 0.1);
+            border-radius: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            font-weight: 500;
+            font-size: 0.875rem;
+        }
+        
+        .hero-tag-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            margin-right: 0.75rem;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(0.95);
+                opacity: 0.7;
+            }
+            70% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(0.95);
+                opacity: 0.7;
+            }
+        }
+        
+        .hero-title {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-description {
+            font-size: 1.125rem;
+            max-width: 90%;
+            margin-bottom: 2rem;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            color: white;
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-2px);
+            color: var(--primary);
+        }
+        
+        .btn i {
+            margin-right: 0.5rem;
+        }
+        
+        .hero-image-container {
+            position: relative;
+        }
+        
+        .hero-image {
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            z-index: -1;
+            border-radius: 1.2rem;
+            opacity: 0.2;
+            filter: blur(10px);
+        }
+        
+        .hero-stats-card {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background-color: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            z-index: 2;
+        }
+        
+        .stat-icons {
+            display: flex;
+            margin-right: 0.5rem;
+        }
+        
+        .stat-icon {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-left: -0.5rem;
+        }
+        
+        .stat-icon-success {
+            background-color: var(--success);
+        }
+        
+        .stat-icon-accent {
+            background-color: var(--accent);
+        }
+        
+        .stat-text {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+        
+        .stat-value {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+            padding-top: 2.5rem;
+            border-top: 1px solid var(--border);
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-item-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-item-label {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 5rem 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .separator {
+            width: 6rem;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--primary), transparent);
+            margin: 1rem auto 2rem;
+        }
+        
+        /* About Section */
+        .about {
+            background-color: white;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-image {
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-tag {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.4rem 0.75rem;
+            background-color: var(--muted);
+            border-radius: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+            font-size: 0.75rem;
+        }
+        
+        .about-tag i {
+            margin-right: 0.5rem;
+            color: var(--primary);
+        }
+        
+        .about-quote {
+            border-left: 3px solid var(--primary);
+            padding-left: 1rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-dark);
+        }
+        
+        .about-credentials {
+            margin-top: 1.5rem;
+        }
+        
+        .credential-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+        
+        .credential-item i {
+            color: var(--primary);
+            margin-right: 0.75rem;
+            font-size: 1.125rem;
+        }
+        
+        /* Research Section */
+        .research {
+            background-color: var(--muted);
+        }
+        
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .research-card {
+            background-color: white;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .research-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+        
+        .research-icon {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            background-color: var(--primary-light);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+        
+        .research-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .research-description {
+            font-size: 0.9375rem;
+            margin-bottom: 1rem;
+        }
+        
+        .research-items {
+            list-style: none;
+        }
+        
+        .research-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+        }
+        
+        .research-item i {
+            color: var(--primary);
+            margin-right: 0.5rem;
+            margin-top: 0.25rem;
+            font-size: 0.75rem;
+        }
+        
+        .expertise {
+            margin-top: 4rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            background: linear-gradient(135deg, var(--primary-light), var(--secondary));
+        }
+        
+        .expertise-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+        
+        .expertise-item {
+            background-color: white;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        .expertise-icon {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            background-color: var(--primary-light);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .expertise-title {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        
+        /* Projects Section */
+        .projects {
+            background-color: white;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .project-card {
+            background-color: var(--background);
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-image {
+            height: 12rem;
+            overflow: hidden;
+        }
+        
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
+        
+        .project-content {
+            padding: 1.5rem;
+        }
+        
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+        }
+        
+        .project-title {
+            font-size: 1.125rem;
+            margin-bottom: 0;
+        }
+        
+        .project-status {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-weight: 500;
+        }
+        
+        .status-deployed {
+            background-color: var(--success-light);
+            color: var(--success);
+        }
+        
+        .status-trial {
+            background-color: var(--secondary);
+            color: var(--secondary-dark);
+        }
+        
+        .status-research {
+            background-color: var(--accent);
+            color: var(--accent-dark);
+        }
+        
+        .project-description {
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .project-tag {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            background-color: var(--primary-light);
+            color: var(--primary);
+            font-weight: 500;
+        }
+        
+        .project-link {
+            display: flex;
+            align-items: center;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--primary);
+        }
+        
+        .project-link i {
+            margin-left: 0.5rem;
+            font-size: 0.75rem;
+            transition: transform 0.2s ease;
+        }
+        
+        .project-link:hover i {
+            transform: translateX(3px);
+        }
+        
+        .projects-footer {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        /* Publications Section */
+        .publications {
+            background: linear-gradient(to bottom, var(--muted), white);
+        }
+        
+        .publications-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .publication-card {
+            background-color: white;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .publication-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+        
+        .publication-header {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .publication-info {
+            flex: 1;
+        }
+        
+        .publication-title {
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .publication-authors, .publication-journal {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+        
+        .publication-meta {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 0.5rem;
+        }
+        
+        .publication-rating {
+            color: var(--accent);
+            display: flex;
+            gap: 0.25rem;
+        }
+        
+        .publication-citations {
+            color: var(--accent);
+            font-size: 0.875rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+        
+        .publication-citations i {
+            margin-right: 0.5rem;
+        }
+        
+        .publication-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+        }
+        
+        .publication-tag {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            background-color: var(--primary-light);
+            color: var(--primary);
+            font-weight: 500;
+        }
+        
+        .publication-footer {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .publication-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .publication-link {
+            display: flex;
+            align-items: center;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        .publication-link i {
+            margin-right: 0.5rem;
+        }
+        
+        .publication-access {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-weight: 500;
+        }
+        
+        .access-open {
+            background-color: var(--success-light);
+            color: var(--success);
+        }
+        
+        .access-journal {
+            background-color: var(--accent);
+            color: var(--accent-dark);
+        }
+        
+        .publications-footer {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: white;
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .contact-info h2 {
+            margin-bottom: 1rem;
+        }
+        
+        .contact-info .separator {
+            margin: 1rem 0 2rem;
+        }
+        
+        .contact-details {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .contact-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background-color: var(--primary-light);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-text h4 {
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .contact-text p {
+            font-size: 0.9375rem;
+            margin-bottom: 0;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+        
+        .social-link {
+            color: var(--text-light);
+            transition: color 0.3s ease;
+        }
+        
+        .social-link:hover {
+            color: var(--primary);
+        }
+        
+        .contact-opportunities {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: var(--muted);
+            border-radius: 0.5rem;
+        }
+        
+        .opportunity-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+        }
+        
+        .opportunity-item i {
+            color: var(--primary);
+            margin-right: 0.75rem;
+            margin-top: 0.25rem;
+        }
+        
+        .contact-form-container {
+            background-color: var(--background);
+            border-radius: 0.5rem;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-form-container h3 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            font-size: 0.9375rem;
+            color: var(--text-dark);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: 0.375rem;
+            background-color: white;
+            font-family: var(--font-sans);
+            color: var(--text-dark);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px var(--primary-light);
+        }
+        
+        select.form-control {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            background-size: 1rem;
+            padding-right: 2.5rem;
+        }
+        
+        textarea.form-control {
+            min-height: 8rem;
+            resize: vertical;
+        }
+        
+        .form-check {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-check-input {
+            width: 1.25rem;
+            height: 1.25rem;
+            margin-top: 0.125rem;
+            accent-color: var(--primary);
+        }
+        
+        .form-check-label {
+            font-size: 0.875rem;
+            margin-bottom: 0;
+            font-weight: 400;
+        }
+        
+        .btn-submit {
+            width: 100%;
+        }
+        
+        .success-message {
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+        
+        .success-icon {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            background-color: var(--success-light);
+            color: var(--success);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--text-dark);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-logo-circle {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        
+        .footer-description {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .footer-social a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: color 0.3s ease;
+        }
+        
+        .footer-social a:hover {
+            color: white;
+        }
+        
+        .footer-links h4 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.125rem;
+        }
+        
+        .footer-nav {
+            list-style: none;
+        }
+        
+        .footer-nav li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-nav a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: color 0.3s ease;
+        }
+        
+        .footer-nav a:hover {
+            color: white;
+        }
+        
+        .footer-subscribe h4 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.125rem;
+        }
+        
+        .footer-subscribe p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 1.5rem;
+        }
+        
+        .subscribe-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .subscribe-input {
+            padding: 0.75rem;
+            border-radius: 0.375rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+        
+        .subscribe-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .subscribe-input:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        .footer-bottom {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.875rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 2rem;
+            }
+            
+            .hero {
+                padding: 8rem 0 4rem;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .research-grid,
+            .expertise-grid,
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .mobile-menu-button {
+                display: block;
+            }
+            
+            .hero-content,
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .hero-image-container {
+                order: -1;
+            }
+            
+            .research-grid,
+            .expertise-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .publication-meta {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.75rem;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .hero {
+                padding: 7rem 0 3rem;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+            
+            .hero-stats {
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+            
+            .hero-stats-card {
+                right: 0;
+                bottom: -10px;
+            }
+            
+            .section-header {
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+    
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-container">
+                <div class="logo">
+                    <div class="logo-circle">KI</div>
+                    <div class="logo-text">Dr. Kehinde Idowu</div>
+                </div>
+                
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#research">Research</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#publications">Publications</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <button class="mobile-menu-button" id="mobileMenuButton">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+   <!-- Mobile Menu (Fixed Version) -->
+<div id="mobileMenu" style="display: none; position: fixed; top: 70px; left: 0; width: 100%; background-color: white; box-shadow: 0 4px 10px rgba(0,0,0,0.1); z-index: 999; box-sizing: border-box;">
+    <div style="padding: 0 1rem; max-width: 100%; box-sizing: border-box;">
+        <ul style="list-style: none; padding: 1rem 0; margin: 0;">
+            <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--border);">
+                <a href="#about" style="display: block; color: var(--text-light);">About</a>
+            </li>
+            <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--border);">
+                <a href="#research" style="display: block; color: var(--text-light);">Research</a>
+            </li>
+            <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--border);">
+                <a href="#projects" style="display: block; color: var(--text-light);">Projects</a>
+            </li>
+            <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--border);">
+                <a href="#publications" style="display: block; color: var(--text-light);">Publications</a>
+            </li>
+            <li style="padding: 0.75rem 0;">
+                <a href="#contact" style="display: block; color: var(--text-light);">Contact</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+    
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-pattern"></div>
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <div>
+                    <div class="hero-tag">
+                        <span class="hero-tag-dot"></span>
+                        AI Drug Discovery Expert
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        Revolutionizing Health <br>
+                        with <span class="text-primary">AI Drug Discovery</span>
+                    </h1>
+                    
+                    <p class="hero-description">
+                        Pioneering cost-effective antiviral solutions through artificial intelligence and cheminformatics to address global health challenges.
+                    </p>
+                    
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i> Get in Touch
+                        </a>
+                        
+                        <a href="#projects" class="btn btn-outline">
+                            <i class="fas fa-flask"></i> View Projects
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-image-container" data-aos="fade-left" data-aos-delay="200">
+                    <div class="hero-image">
+                        <img src="images/Profile2.jpg" alt="Dr. Kehinde Idowu">
+                    </div>
+                    
+                    <div class="hero-stats-card">
+                        <div class="stat-icons">
+                            <div class="stat-icon stat-icon-success">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="stat-icon stat-icon-accent">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="stat-text">Research Impact</div>
+                            <div class="stat-value">+20% R&D efficiency</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-item-value">15+</div>
+                    <div class="stat-item-label">Years Experience</div>
+                </div>
+                
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-item-value">15</div>
+                    <div class="stat-item-label">Research Projects</div>
+                </div>
+                
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="stat-item-value">2</div>
+                    <div class="stat-item-label">Platforms Deployed</div>
+                </div>
+                
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="600">
+                    <div class="stat-item-value">5</div>
+                    <div class="stat-item-label">Pharma Partners</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>About Me</h2>
+                <div class="separator"></div>
+                <p>My journey at the intersection of AI and pharmaceutical innovation</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image" data-aos="fade-right">
+                    <img src="images/Close_Biome.jpg" alt="Dr. Kehinde Idowu working on AI drug discovery">
+                </div>
+                
+                <div data-aos="fade-left">
+                    <div class="about-tag">
+                        <i class="fas fa-user-md"></i> Biography
+                    </div>
+                    
+                    <h3>Leading AI-Driven Drug Discovery</h3>
+                    
+                    <p>
+                        Dr. Kehinde Ademola Idowu is a recognized molecular virologist, biochemist, and computational translational scientist with over 15 years of interdisciplinary expertise in drug discovery, infectious disease modeling, AI-driven therapeutics, and global health innovation. He holds a Ph.D. in Virology from the University of KwaZulu-Natal, South Africa, and currently serves as Research Assistant Professor in the Department of Pharmaceutical Sciences at Texas Southern University (TSU).
+                    </p>
+                    <p>
+                        As the Director of both the Infectious Disease Drug Discovery Laboratory (IDDD Lab) and the Biomolecular Research and Advanced Computing Centre (BioRACC) at TSU, Dr. Idowu leads cutting-edge programs integrating computational biology, machine learning, molecular dynamics, and experimental validation for antiviral, antibacterial, and anticancer drug discovery. He has pioneered the application of high-performance computing clusters and AI-based pipelines for the rational design and simulation of novel therapeutics targeting co-infections such as HIV/TB, SARS-CoV-2, and other emerging pathogens.
+                    </p>
+                    <p>
+                        Dr. Idowu's research is backed by major funding agencies, including the NIH, HRSA, and the U.S. Department of Energy. Notably, he is the Principal Investigator (PI) on several federally funded projects, such as a $2.4M HRSA award addressing maternal and child health disparities, and a Department of Energy grant focused on pandemic biopreparedness. He has authored more than 30 peer-reviewed publications and contributed extensively to the fields of protein interaction modeling, computational biology, and pharmacogenomics.
+                    </p>
+                    
+                    <div class="about-quote">
+                        "I believe AI can transform healthcare by making drug discovery faster, cheaper, and more accessible to those in need."
+                    </div>
+                    
+                    <div class="about-credentials">
+                        <div class="credential-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>PhD in Virology, University of KwaZulu-Natal</span>
+                        </div>
+                        <div class="credential-item">
+                            <i class="fas fa-building"></i>
+                            <span>Research Assistant Professor, Texas Southern University</span>
+                        </div>
+                        <div class="credential-item">
+                            <i class="fas fa-award"></i>
+                            <span>Principal Investigator on NIH, HRSA, DOE Grants</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Research Section -->
+    <section class="research" id="research">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Research Areas</h2>
+                <div class="separator"></div>
+                <p>Exploring AI solutions for antiviral drug discovery and screening</p>
+            </div>
+            
+            <div class="research-grid">
+                <div class="research-card" data-aos="fade-up">
+                    <div class="research-icon">
+                        <i class="fas fa-vial"></i>
+                    </div>
+                    <h3 class="research-title">Antiviral Bioactivity Prediction</h3>
+                    <p class="research-description">
+                        Developing AI models to predict IC50 values and prioritize antiviral compounds.
+                    </p>
+                    <ul class="research-items">
+                        <li class="research-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Random Forest for SARS inhibitors</span>
+                        </li>
+                        <li class="research-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Descriptor computation with RDKit</span>
+                        </li>
+                        <li class="research-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Scatter plot visualizations</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="research-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="research-icon">
+                        <i class="fas fa-filter"></i>
+                    </div>
+                    <h3 class="research-title">High-Throughput Screening</h3>
+                    <p class="research-description">
+                        Creating AI platforms to screen thousands of compounds for antiviral activity.
+                    </p>
+                    <ul class="research-items">
+                        <li class="research-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Binding affinity ranking</span>
+                        </li>
+                        <li class="research-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Drug-likeness analysis</span>
+                        </li>
+                        <li class="research-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Cheminformatics tools</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="research-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="research-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="research-title">Data-Driven Optimization</h3>
+                    <p class="research-description">
+                        Optimizing drug discovery pipelines using machine learning and public datasets.
+                    </p>
+                    <ul class="research-items">
+                        <li class="research-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>ChEMBL data integration</span>
+                        </li>
+                        <li class="research-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Feature importance analysis</span>
+                        </li>
+                        <li class="research-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Cost-saving strategies</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="expertise" data-aos="fade-up">
+                <div class="expertise-header">
+                    <h3>Core Expertise</h3>
+                    <p>Technical and scientific skills driving my research</p>
+                </div>
+                
+                <div class="expertise-grid">
+                    <div class="expertise-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="expertise-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="expertise-title">Machine Learning</div>
+                    </div>
+                    
+                    <div class="expertise-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="expertise-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <div class="expertise-title">Cheminformatics</div>
+                    </div>
+                    
+                    <div class="expertise-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="expertise-icon">
+                            <i class="fas fa-virus"></i>
+                        </div>
+                        <div class="expertise-title">Virology</div>
+                    </div>
+                    
+                    <div class="expertise-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="expertise-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="expertise-title">Data Science</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+ <!-- Projects Section -->
+<section class="projects" id="projects">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Featured Projects</h2>
+            <div class="separator"></div>
+            <p>Transforming AI into practical antiviral solutions</p>
+        </div>
+        
+        <div class="projects-grid">
+            <!-- Project 1: SARS Antiviral Bioactivity Prediction -->
+            <div class="project-card" data-aos="fade-up">
+                <div class="project-image">
+                    <a href="https://github.com/kidowu01/bioactivity-prediction" target="_blank">
+                        <img src="images/Comp_img4.jpg" alt="SARS Antiviral Bioactivity Prediction visualization">
+                    </a>
+                </div>
+                
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3 class="project-title">SARS Antiviral Bioactivity Prediction</h3>
+                        <span class="project-status status-deployed">Deployed</span>
+                    </div>
+                    
+                    <p class="project-description">
+                        An AI pipeline predicting IC50 values for SARS coronavirus inhibitors using Random Forest and RDKit descriptors, prioritizing drugs like lopinavir.
+                    </p>
+                    
+                    <div class="project-tags">
+                        <span class="project-tag">ML</span>
+                        <span class="project-tag">Cheminformatics</span>
+                        <span class="project-tag">SARS</span>
+                    </div>
+                    
+                    <a href="https://github.com/kidowu01/bioactivity-prediction" class="project-link" target="_blank">
+                        View project details <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Project 2: AI-Powered Antiviral Screening -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-image">
+                    <a href="https://github.com/kidowu01/AI-Powered-Antiviral-Compound-Screening-Platform" target="_blank">
+                        <img src="images/Image_fx(102).jpg" alt="AI-Powered Antiviral Screening Platform visualization">
+                    </a>
+                </div>
+                
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3 class="project-title">AI-Powered Antiviral Screening</h3>
+                        <span class="project-status status-trial">Clinical Trial</span>
+                    </div>
+                    
+                    <p class="project-description">
+                        A platform screening thousands of compounds for SARS-CoV-2 activity, ranking by binding affinity and drug-likeness with AI and RDKit.
+                    </p>
+                    
+                    <div class="project-tags">
+                        <span class="project-tag">High-Throughput</span>
+                        <span class="project-tag">Antiviral</span>
+                        <span class="project-tag">AI</span>
+                    </div>
+                    
+                    <a href="https://github.com/kidowu01/AI-Powered-Antiviral-Compound-Screening-Platform" class="project-link" target="_blank">
+                        View project details <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Project 3: SARS-CoV-2 Multi-Omics Integrator -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-image">
+                    <a href="https://github.com/kidowu01/SARS-CoV-2-Multi-Omics-Integrator-for-Host-Virus-Interaction" target="_blank">
+                        <img src="images/Img6.jpg" alt="SARS-CoV-2 Multi-Omics Integrator visualization">
+                    </a>
+                </div>
+                
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3 class="project-title">SARS-CoV-2 Multi-Omics Integrator</h3>
+                        <span class="project-status status-research">Research</span>
+                    </div>
+                    
+                    <p class="project-description">
+                        Optimizing antiviral R&D pipelines using machine learning and ChEMBL data to enhance efficiency and reduce costs.
+                    </p>
+                    
+                    <div class="project-tags">
+                        <span class="project-tag">Bioinformatics</span>
+                        <span class="project-tag">ML</span>
+                        <span class="project-tag">Antiviral Research</span>
+                    </div>
+                    
+                    <a href="https://github.com/kidowu01/SARS-CoV-2-Multi-Omics-Integrator-for-Host-Virus-Interaction" class="project-link" target="_blank">
+                        View project details <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Project 4: Linear Regression for Company Profit Prediction -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="project-image">
+                    <a href="https://github.com/kidowu01/Linear-Regression-for-Company-Profit-Prediction" target="_blank">
+                        <img src="images/Image1.jpg" alt="Linear Regression for Company Profit Prediction visualization">
+                    </a>
+                </div>
+                
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3 class="project-title">Linear Regression for Company Profit Prediction</h3>
+                        <span class="project-status status-deployed">Deployed</span>
+                    </div>
+                    
+                    <p class="project-description">
+                        A machine learning pipeline predicting pharmaceutical company profits using linear regression, leveraging R&D Spend and other features, with an R² of 0.911.
+                    </p>
+                    
+                    <div class="project-tags">
+                        <span class="project-tag">ML</span>
+                        <span class="project-tag">Financial Analytics</span>
+                        <span class="project-tag">Data Visualization</span>
+                    </div>
+                    
+                    <a href="https://github.com/kidowu01/Linear-Regression-for-Company-Profit-Prediction" class="project-link" target="_blank">
+                        View project details <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+             <!-- Project 5: Supervised Machine Learning for Housing and Cancer Analysis -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="project-image">
+                    <a href="https://github.com/kidowu01/Supervised-Machine-Learning-for-Housing-and-Cancer-Analysis/tree/main" target="_blank">
+                        <img src="images/Iv1.jpg" alt="Linear Regression for Company Profit Prediction visualization">
+                    </a>
+                </div>
+                
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3 class="project-title">Supervised Machine Learning for Housing and Cancer Analysis</h3>
+                        <span class="project-status status-deployed">Deployed</span>
+                    </div>
+                    
+                    <p class="project-description">
+                        Implements supervised ML models Linear Regression, Support Vector Machines (SVM), and Naive Bayesian Classification to predict housing prices.
+                    
+                    <div class="project-tags">
+                        <span class="project-tag">ML</span>
+                        <span class="project-tag">Financial Analytics</span>
+                        <span class="project-tag">Medical Diagnostics</span>
+                    </div>
+                    
+                    <a href="https://github.com/kidowu01/Supervised-Machine-Learning-for-Housing-and-Cancer-Analysis/tree/main" class="project-link" target="_blank">
+                        View project details <i class= "fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+<!-- Project 6: Tackling Hypertensive Disorders in Pregnancy: Analyzing Racial Disparities in the U.S. -->
+<div class="project-card" data-aos="fade-up" data-aos-delay="300">
+    <div class="project-image">
+        <a href="https://github.com/kidowu01/Hypertensive-Disorders-in-Pregnancy" target="_blank">
+            <img src="images/im55.jpg" alt="Linear Regression for Company Profit Prediction visualization">
+        </a>
+    </div>
+    
+    <div class="project-content">
+        <div class="project-header">
+            <h3 class="project-title">Tackling Hypertensive Disorders in Pregnancy: Analyzing Racial Disparities in the U.S.</h3>
+            <span class="project-status status-deployed">Deployed</span>
+        </div>
+        
+        <p class="project-description">
+            This project dives into the critical issue of hypertensive disorders of pregnancy (HDP), a leading cause of maternal and fetal complications, by analyzing trends across racial groups in the United States
+        
+        <div class="project-tags">
+            <span class="project-tag">E.D.A</span>
+            <span class="project-tag">Healthcare Analytics</span>
+            <span class="project-tag">Medical Diagnostics</span>
+        </div>
+        
+        <a href="https://github.com/kidowu01/Hypertensive-Disorders-in-Pregnancy" class="project-link" target="_blank">
+            View project details <i class= "fas fa-arrow-right"></i>
+        </a>
+    </div>
+</div>
+
+            <!-- Project 7: Biochemical Pathway Simulation in HIV Virus -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="project-image">
+                    <a href="https://github.com/kidowu01/Biochemical-Pathway-Simulation-in-HIV-Virus" target="_blank">
+                        <img src="images/Im5.jpg" alt="Biochemical Pathway Simulation in HIV Virus visualization">
+                    </a>
+                </div>
+                
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3 class="project-title">Biochemical Pathway Simulation in HIV Virus</h3>
+                        <span class="project-status status-research">Research</span>
+                    </div>
+                    
+                    <p class="project-description">
+                        Simulates HIV intracellular replication using ODEs, modeling molecular species (RNA, cDNA, Provirus) to support antiviral drug discovery.
+                    </p>
+                    
+                    <div class="project-tags">
+                        <span class="project-tag">Computational Biology</span>
+                        <span class="project-tag">Antiviral Research</span>
+                        <span class="project-tag">Data Visualization</span>
+                    </div>
+                    
+                    <a href="https://github.com/kidowu01/Biochemical-Pathway-Simulation-in-HIV-Virus" class="project-link" target="_blank">
+                        View project details <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="projects-footer" data-aos="fade-up">
+            <a href="https://github.com/kidowu01" class="btn btn-outline" target="_blank">
+                View All Projects <i class= "fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+    
+    
+<!-- Publications Section -->
+<section class="publications" id="publications">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <h2>Selected Publications</h2>
+      <div class="separator"></div>
+      <p>Exploring the intersection of AI, molecular simulations, and biomedical research</p>
+    </div>
+
+    <div class="publications-list">
+      
+      <!-- Publication 1 -->
+      <div class="publication-card" data-aos="fade-up">
+        <div class="publication-header">
+          <div class="publication-info">
+            <h3 class="publication-title">Design and synthesis of quinoline-pyrimidine inspired hybrids as potential plasmodial inhibitors</h3>
+            <p class="publication-authors">
+              <strong>Authors:</strong> Francis Kayamba, Teboho Malimabe, Idowu Kehinde Ademola, Ofentse Jacob Pooe, Narva Deshwar Kushwaha, Mavela Mahlalela, Robyn L. van Zyl, Michelle Gordon, Pertunia T. Mudau, Tawanda Zininga, Addmore Shonhai, Vincent O. Nyamori, Rajshekhar Karpoormath
+            </p>
+            <p class="publication-journal">
+              <strong>Journal:</strong> European Journal of Medicinal | 2021 | Impact Factor: 5.49
+            </p>
+          </div>
+          <div class="publication-meta">
+            <div class="publication-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="publication-citations">
+              <i class="fas fa-file-alt"></i> 51 Citations
+            </div>
+          </div>
+        </div>
+
+        <div class="publication-tags">
+          <span class="publication-tag">Molecular Hybridisation</span>
+          <span class="publication-tag">Antiviral</span>
+        </div>
+
+        <div class="publication-footer">
+          <div class="publication-links">
+            <a href="https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10436451329956172282&as_sdt=5" class="publication-link" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-external-link-alt"></i> Citation
+            </a>
+            <a href="https://www.sciencedirect.com/getaccess/pii/S0223523421001793/purchase" class="publication-link" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-shopping-cart"></i> Access PDF
+            </a>
+           <a href="https://doi.org/10.1016/j.ejmech.2021.113718" 
+   class="publication-link" 
+   target="_blank" 
+   rel="noopener noreferrer">
+   <i class="fas fa-external-link-alt"></i> DOI
+</a>
+
+            </a>
+          </div>
+          <span class="publication-access access-open">Journal Access</span>
+        </div>
+      </div>
+
+      <!-- Publication 2 -->
+     <div class="publication-card" data-aos="fade-up" data-aos-delay="100">
+    <div class="publication-header">
+        <div class="publication-info">
+            <h3 class="publication-title">The pharmacokinetic properties of HIV-1 protease inhibitors: A computational perspective on herbal phytochemicals</h3>
+            <p class="publication-authors"><strong>Authors:</strong> Idowu Kehindea ∙ Pritika Ramharackb ∙ Manimbulu Nlootob  ∙ Michelle Gordona</p>
+            <p class="publication-journal"><strong>Journal:</strong> Heliyon | 2019 | Impact Factor: 7.088</p>
+        </div>
+        <div class="publication-meta">
+            <div class="publication-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <div class="publication-citations">
+                <i class="fas fa-file-alt"></i> 45 Citations
+            </div>
+        </div>
+    </div>
+
+    <div class="publication-tags">
+        <span class="publication-tag">Pharmaceutical chemistry
+</span>
+        <span class="publication-tag">Antiviral activities</span>
+        <span class="publication-tag">HIV protease</span>
+    </div>
+
+    <div class="publication-footer">
+        <div class="publication-links">
+            <a href="https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5582471662011172022&as_sdt=5" class="publication-link" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-external-link-alt"></i> Citation
+            </a>
+           <a href="assets/pdfs/PIIS2405844019362255.pdf" class="publication-link" target="_blank" rel="noopener noreferrer">
+    <i class="fas fa-download"></i> Access PDF
+            </a>
+            <a href="https://www.cell.com/heliyon/fulltext/S2405-8440(19)36225-5" class="publication-link" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-external-link-alt"></i> DOI
+            </a>
+        </div>
+        <span class="publication-access access-journal">Open Access</span>
+    </div>
+</div>
+
+
+      <!-- Publication 3 -->
+     <div class="publication-card" data-aos="fade-up" data-aos-delay="200">
+    <div class="publication-header">
+        <div class="publication-info">
+            <h3 class="publication-title">
+                Astaxanthin-Mediated Bacterial Lethality: Evidence from Oxidative Stress Contribution and Molecular Dynamics Simulation
+            </h3>
+            <p class="publication-authors">
+                <strong>Authors:</strong> Jamiu Olaseni Aribisala ∙ Sonto Nkosi ∙ Kehinde Idowu ∙ Ismaila Olanrewaju Nurain ∙ Gaositwe Melvin Makolomakwa ∙ Francis O. Shode ∙ Saheed Sabiu
+            </p>
+            <p class="publication-journal">
+                <strong>Journal:</strong> Oxidative Medicine and Cellular Longevity | 2021 | Impact Factor: 6.88
+            </p>
+        </div>
+        <div class="publication-meta">
+            <div class="publication-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <div class="publication-citations">
+                <i class="fas fa-file-alt"></i> 30 Citations
+            </div>
+        </div>
+    </div>
+
+    <div class="publication-tags">
+        <span class="publication-tag">Oxidative Stress</span>
+        <span class="publication-tag">Molecular Simulation</span>
+    </div>
+
+    <div class="publication-footer">
+        <div class="publication-links">
+            <a href="https://scholar.google.com/scholar?oi=bibs&hl=en&cites=16462622927734553533&as_sdt=5" class="publication-link" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-external-link-alt"></i> Citation
+            </a>
+            <a href="https://onlinelibrary.wiley.com/doi/epdf/10.1155/2021/7159652" class="publication-link" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-download"></i> Access PDF
+            </a>
+            <a href="https://onlinelibrary.wiley.com/doi/full/10.1155/2021/7159652" class="publication-link" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-external-link-alt"></i> DOI
+            </a>
+        </div>
+        <span class="publication-access access-open">Open Access</span>
+    </div>
+</div>
+ <div class="publications-footer" data-aos="fade-up">
+                <a href="https://scholar.google.com/citations?user=86wguVsAAAAJ&hl=en" class="btn btn-outline" target="_blank" rel="noopener noreferrer"> 
+                    View Complete Publication List <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <h2>Get in Touch</h2>
+                    <div class="separator" style="margin-left: 0;"></div>
+                    <p>
+                        Interested in collaboration or consulting on AI-driven drug discovery? Contact me.
+                    </p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>kehinde.idowu.a@tsu.edu</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Address</h4>
+                                <p>31907 Settlers Ridge Lane, Fulshear<br>Texas, USA</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Connect</h4>
+                                <div class="social-links">
+                                    <a href="https://www.linkedin.com/in/kehindeademolaidowu/" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="https://github.com/kidowu01" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                                    <a href="mailto:kehinde.idowu.a@tsu.edu" class="social-link"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-opportunities">
+                        <h3>Current Opportunities</h3>
+                        <div class="opportunity-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Seeking collaborators for antiviral AI projects</span>
+                        </div>
+                        <div class="opportunity-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Consulting services for pharma R&D</span>
+                        </div>
+                        <div class="opportunity-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Open to funding proposals</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container" data-aos="fade-left">
+                    <h3>Send a Message</h3>
+                    
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Your name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Your email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select class="form-control" id="subject" required>
+                                <option value="" selected disabled>Select a subject</option>
+                                <option value="research-collaboration">Research Collaboration</option>
+                                <option value="consulting">Consulting</option>
+                                <option value="funding">Funding Proposal</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" placeholder="Your message" required></textarea>
+                        </div>
+                        
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="consent" required>
+                            <label class="form-check-label" for="consent">
+                                I consent to having this website store my submitted information so they can respond to my inquiry.
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            Send Message
+                        </button>
+                    </form>
+                    
+                    <div id="successMessage" class="success-message" style="display: none;">
+                        <div class="success-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <h3>Message Sent!</h3>
+                        <p>Thank you for reaching out. I'll get back to you soon.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-logo">
+                        <div class="footer-logo-circle">KI</div>
+                        <span class="logo-text">Dr. Kehinde Idowu</span>
+                    </div>
+                    <p class="footer-description">
+                        Revolutionizing health through AI-driven drug discovery and consulting.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/kehindeademolaidowu/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/kidowu01" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="mailto:kehinde.idowu@dmmconsultingsolutions.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-nav">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#research">Research Areas</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#publications">Publications</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-subscribe">
+                    <h4>Subscribe to Updates</h4>
+                    <p>Stay informed about the latest in AI drug discovery.</p>
+                    <form class="subscribe-form">
+                        <input type="email" class="subscribe-input" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© <span id="currentYear">2025</span> Dr. Kehinde Idowu. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS animation library
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        // Progress bar
+        window.addEventListener('scroll', function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        });
+        
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuButton.addEventListener('click', function() {
+            if (mobileMenu.style.display === 'none') {
+                mobileMenu.style.display = 'block';
+                mobileMenuButton.innerHTML = '<i class="fas fa-times"></i>';
+            } else {
+                mobileMenu.style.display = 'none';
+                mobileMenuButton.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+        
+        // Close mobile menu when clicking on a link
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.style.display = 'none';
+                mobileMenuButton.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Contact form submission
+        const contactForm = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Here you would normally handle the form submission with AJAX
+            // For demo purposes, we'll just show the success message
+            contactForm.style.display = 'none';
+            successMessage.style.display = 'block';
+        });
+        
+        // Update current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
